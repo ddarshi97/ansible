@@ -1,0 +1,15 @@
+---
+- name: coping the file
+  hosts: myservers
+  tasks:
+    - name: installing multiple package
+      apt:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - default-jdk
+        - git
+        - tree
+    - name: updating the system
+      apt:
+        update_cache: tree
