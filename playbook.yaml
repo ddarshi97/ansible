@@ -12,4 +12,4 @@
         - tree
     - name: updating the system
       apt:
-        update_cache: tree
+        update_cache: true
